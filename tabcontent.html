@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content='width=device-width,minimum-scale=1,initial-scale=1' name='viewport'/>
+<title>Untitled Document</title>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+body{margin:0;padding:0;background:#2b374f;font-family:Quicksand,sans-serif}
+a,a:visited{color:#555;outline:none;text-decoration:none}
+a:hover,a:focus,a:visited:hover{color:#22a1c4;text-decoration:none}
+#blogryand{background:#fff;position:relative;margin:5% auto;width:100%;max-width:920px;overflow:hidden;box-shadow:0 0 0 20px rgba(0,0,0,0.03)}
+#header{height:200px;margin:0;background:#fdfdfd}
+#header h1{display:table;color:#999;font-weight:400;text-align:center;margin:auto;padding:50px 50px 0 50px;font-size:55px}
+#header p{display:table;color:#999;font-weight:400;text-align:center;margin:auto;padding:10px;font-size:20px}
+#menuwrap{float:left;background:#fff;width:100%;position:relative;margin:0 auto 20px auto;padding:0;height:60px}
+#menu{position:absolute;width:100%;max-width:920px;height:60px;margin:auto;background:#e0a72b;z-index:2}
+#menu span{display:table;color:#fff;text-align:center;margin:auto;padding:20px 0;font-size:20px}
+#menu:before{position:absolute;content:'';display:inline-block;left:0;top:0;height:60px;width:80px;margin:0;text-align:center;background:#cd9927}
+#menu:after{position:absolute;content:'\f015';display:inline-block;font-family:FontAwesome;left:0;top:0;height:60px;line-height:60px;width:80px;margin:0;text-align:center;color:#fff;font-size:20px}
+#content{position:relative;width:100%;height:1850px;margin:0;background:#fff;padding:20px 0}
+#main{position:relative;float:left;width:70%;background:#fff}
+h3{font-size:150%;line-height:normal;padding:0 0 20px 0;margin:0 20px 20px;border-bottom:1px solid rgba(0,0,0,0.05)}
+#side{background:#fff;width:30%;float:right;position:relative;margin:0;padding:0}
+#sidecontent2{width:255px;height:200px;margin:0 20px 20px auto;background:#9da9c0;position:relative}
+#sidecontent2 span{display:table;color:#fff;text-align:center;margin:auto;padding:20px 0;font-size:25px}
+#footer{height:300px;clear:both;background:#3a4c6d}
+#credit{height:60px;margin:0;background:#fff}
+#credit span{display:table;color:#9da9c0;text-align:center;font-size:16px;line-height:60px;margin:auto}
+/* Tabbed Content */
+.content_tab,.hideContent input[type=checkbox],.tab [type=radio]{display:none}
+.tabs{position:relative;clear:both;margin:0;padding:40px 0 0;margin:20px}
+.tab label{height:40px;line-height:40px;padding:0 10px;position:absolute;top:0;cursor:pointer;border:1px solid transparent;width:100px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center;font-weight:700}
+.tab label[for=tab-2]{left:100px}
+.tab label[for=tab-3]{left:200px}
+.content_tab{position:relative;background:#efefef;padding:10px;border:1px solid #ccc;margin-top:-1px}
+.content_tab p{margin:0;padding:0}
+.tab [type=radio]:checked~label{background:#efefef;border:1px solid #ccc;border-bottom:1px solid #efefef;z-index:2;border-radius:4px 4px 0 0}
+.tab [type=radio]:checked~label~.content_tab{z-index:1;display:block}
+.hideContent{height:auto}
+.hideContent input[type=checkbox]~div{width:100%;overflow:hidden;max-height:144px;padding-bottom:30px;position:relative}
+.hideContent label{background:#efefef;width:100%;height:30px;line-height:30px;cursor:pointer;position:absolute;top:calc(100% - 30px);left:0;right:0;padding:0;z-index:2;border:none}
+.hideContent label:before{position:absolute;content:'Read More \25BC';width:120px;text-align:center;left:50%;margin-left:-60px;font-weight:700}
+.hideContent input[type=checkbox]~div:after{content:"";width:100%;height:70px;position:absolute;bottom:20px;background:-moz-linear-gradient(top,rgba(0,0,0,0) 0,rgba(239,239,239,.65) 100%);background:-webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(239,239,239,.65) 100%);background:linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(239,239,239,.65) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6efefef', GradientType=0 );z-index:1}
+.hideContent input[type=checkbox]:checked~div{max-height:3000px;transition:2s}
+.hideContent input[type=checkbox]:checked~div:after{background:0 0}
+.hideContent input[type=checkbox]:checked+label:before{content:'Content Less \25B2'}
+</style>
+</head>
+<body>
+<div id="blogryand">
+  <div id="header">
+    <h1>BlogRyand.COM</h1></br>
+    <p>Cara Membuat Tab Konten di Postingan Blog</div>
+  <div id="menuwrap">
+    <div id="menu"><span>Menu</span></div>
+  </div>
+  <div id="content">
+    <div id="main">
+      <h3 id="tabs">Tabs Content</h3>
+        <div class="tabs">
+  <div class="tab">
+    <input type="radio" id="tab-1" name="tab-group-1" checked="">
+   
+    <label for="tab-1">Tab One</label>
+    <div class="content_tab hideContent">
+      <input type="checkbox" id="readmore-1">
+      <label for="readmore-1"></label>
+      <div>
+        Your content one here
+      </div>
+    </div>
+  </div>
+
+  <div class="tab">
+    <input type="radio" id="tab-2" name="tab-group-1">
+    <label for="tab-2">Tab Two</label>
+    <div class="content_tab hideContent">
+      <input type="checkbox" id="readmore-2">
+      <label for="readmore-2"></label>
+      <div>
+        Your content two here
+      </div>
+    </div>
+  </div>
+          
+           <div class="tab">
+    <input type="radio" id="tab-3" name="tab-group-1">
+    <label for="tab-3">Tab Three</label>
+    <div class="content_tab hideContent">
+      <input type="checkbox" id="readmore-3">
+      <label for="readmore-3"></label>
+      <div>
+        Your content three here
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+      
+    </div>
+    <div id="side">
+      <div id="sidecontent2" class="cf"><span>Widget</span></div>
+      <div id="sidecontent2" class="cf"><span>Widget</span></div>
+      <div id="sidecontent2" class="cf"><span>Widget</span></div>
+      <div id="sidecontent2" class="cf"><span>Widget</span></div>
+    </div>
+  </div>
+  <div id="footer" class="cf"></div>
+  <div id="credit"><span>by. Blog Ryand All Right Reserved</span></div>
+</div>
+</body>
+</html>
