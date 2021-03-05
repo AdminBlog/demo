@@ -104,7 +104,8 @@ a:hover.related-post-item-title{color:#2ecc71;text-decoration:none}
     <div class='related-post' id='sliding-tab' />
   </div>
 </div>
-
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/gh/Arlina-Design/redvision@master/sliderekomendasi.js'></script>
 <script>
 //<![CDATA[
 $(window).scroll(function(){$("#chslidingbox").css($(this).scrollTop()>400?{right:"0px"}:{right:"-360px"})}),$(document).ready(function(){var i=$("#chslidingbox"),s=$("#chslidingbox-close"),o=$("#chslidingbox-minimize"),l=$("#chslidingbox-maximize");l.hide(),s.click(function(){i.css({right:"-350px"}),i.fadeOut("slow")}),o.click(function(){i.toggleClass("hide"),$(this).hide(),l.show()}),l.click(function(){i.toggleClass("hide"),$(this).hide(),o.show()})});
